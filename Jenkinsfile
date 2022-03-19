@@ -9,17 +9,5 @@ pipeline {
                   echo "build is success"
                 }
             }
-          stage ('Deploy') {
-              agent {label 'slave01'}
-                steps {
-                  echo "build is success"
-                }
-             }
-          stage ('Test') {
-              agent {label 'slave01'}
-                steps {
-                  echo "build is success"
-                }
-          }
         }
 }
