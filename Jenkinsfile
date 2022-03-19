@@ -2,17 +2,20 @@ pipeline {
     agent any 
         stages {
             stage ('Build') {
+                agent {lable 'lable-02'}
                 steps {
-                   git branch: 'branch1', url: 'https://github.com/suman4197/multipipeline.git'
+                   git branch: 'master', url: 'https://github.com/harishh1265/java-codes.git'
                   echo "build is success"
                 }
             }
           stage ('Deploy') {
+              agent {lable 'lable-02'}
                 steps {
                   echo "build is success"
                 }
              }
           stage ('Test') {
+              agent {lable 'lable-02'}
                 steps {
                   echo "build is success"
                 }
